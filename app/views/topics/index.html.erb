@@ -1,0 +1,8 @@
+<h1>All topics</h1>
+
+<% @topics.each do |topic| %>
+  <ul>
+    <li><%= link_to topic.title, topic %></li>
+  </ul>
+  <p><%= image_tag topic.image, :class => 'thumb' %></p>
+<% end %>
