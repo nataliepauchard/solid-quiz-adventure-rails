@@ -5,4 +5,8 @@
 </ul>
 <p><%= image_tag @topic.image, :class => 'feature' %></p>
 
+<div class="controls">
+  <%= link_to 'Edit Topic', edit_topic_path(@topic) %>
+  <%= button_to 'Delete Topic', @topic, :method => 'delete' %>
+  <%= link_to 'All Questions', questions_path %>
 <p>Questions coming soon</p>
