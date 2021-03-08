@@ -1,15 +1,17 @@
 class QuestionsController < ApplicationController
   def index
     @questions = Question.all
+    render json: @questions
   end
 
   def new
     @question = Question.new
+    render json: @question
   end
 
   def create
     question = Question.create question_params
-    redirect_to question
+    render json: question
   end
 
   def edit
@@ -17,6 +19,7 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find params[:id]
+    render json: @questions
   end
 
   private
