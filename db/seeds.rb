@@ -9,8 +9,14 @@
 Answer.destroy_all
 a1 = Answer.create :content => 'Yellow', :correct_answer => false
 a2 = Answer.create :content => 'Blue', :correct_answer => true
-a3 = Answer.create :content => 'Green', :correct_answer => true
-a4 = Answer.create :content => 'Purple', :correct_answer => false
+a3 = Answer.create :content => 'Indigo', :correct_answer => true
+a4 = Answer.create :content => 'Silver', :correct_answer => true
+
+a5 = Answer.create :content => 'Green', :correct_answer => true
+a6 = Answer.create :content => 'Silver', :correct_answer => false
+a7 = Answer.create :content => 'Gold', :correct_answer => false
+a8 = Answer.create :content => 'Indigo', :correct_answer => false
+
 puts "#{ Answer.count } answers."
 
 Question.destroy_all
@@ -24,8 +30,8 @@ t2 = Topic.create :title => 'The ground', :image => 'https://www.bulletpoint.com
 
 # Associations
 puts "Questions and answers"
-q1.answers << a1 << a2
-q2.answers << a3 << a4
+q1.answers << a1 << a2 << a3 << a4
+q2.answers << a5 << a6 << a7 << a8
 
 puts "Topics and Questions"
 t1.questions << q1
