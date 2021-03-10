@@ -29,8 +29,8 @@ class TopicsController < ApplicationController
   #
   def show
     @topic = Topic.find params[:id]
-    render :show
-      # render json: @topics
+    # render :show
+      render json: @topic, :include => [:questions, :answers]
   end
   #
   def destroy

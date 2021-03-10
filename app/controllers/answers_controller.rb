@@ -20,7 +20,7 @@ class AnswersController < ApplicationController
 
   def show
     @answer = Answer.find params[:id]
-    # render json: @answers
+    render json: @answers
   end
 
   def destroy

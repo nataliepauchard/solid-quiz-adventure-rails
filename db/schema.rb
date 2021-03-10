@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 2021_03_06_062013) do
 
   create_table "questions", force: :cascade do |t|
     t.text "content"
-    t.text "choices"
     t.integer "topic_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

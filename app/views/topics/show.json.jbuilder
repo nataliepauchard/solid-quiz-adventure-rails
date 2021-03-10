@@ -1,1 +1,1 @@
-json.array! "topics/questions/answer", topic: @topic, question: @question, answer: @answer
+json.array! "topics/topic", topic: @topic
