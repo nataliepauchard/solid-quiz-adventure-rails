@@ -13,9 +13,9 @@ a3 = Answer.create :content => 'Indigo', :correct_answer => false
 a4 = Answer.create :content => 'Silver', :correct_answer => false
 
 a5 = Answer.create :content => 'Green', :correct_answer => true
-a6 = Answer.create :content => 'Silver', :correct_answer => false
+a6 = Answer.create :content => 'Brown', :correct_answer => false
 a7 = Answer.create :content => 'Gold', :correct_answer => false
-a8 = Answer.create :content => 'Indigo', :correct_answer => false
+a8 = Answer.create :content => 'Purple', :correct_answer => false
 
 puts "#{ Answer.count } answers."
 

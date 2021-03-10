@@ -1,12 +1,19 @@
 <h1><%= @topic.title %></h1>
 
-<ul>
-  <li><%= @topic.title %></li>
-</ul>
-<p><%= image_tag @topic.image, :class => 'feature' %></p>
+<% @topic.questions.each do |question| %>
+<p><%= question.content %></p>
+<% end %>
 
-<div class="controls">
-  <%= link_to 'Edit Topic', edit_topic_path(@topic) %>
-  <%= button_to 'Delete Topic', @topic, :method => 'delete' %>
-  <%= link_to 'All Questions', questions_path %>
+
+
 <p>Questions coming soon</p>
+
+<p> Answers coming soon<p>
+
+
+
+  <div class="controls">
+    <%= link_to 'Edit Topic', edit_topic_path(@topic) %>
+    <%= button_to 'Delete Topic', @topic, :method => 'delete' %>
+
+  </div>

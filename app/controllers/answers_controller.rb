@@ -1,17 +1,18 @@
 class AnswersController < ApplicationController
   def index
     @answers = Answer.all
-    render json: @answers
+    # render json: @answers
   end
 
   def new
     @answer = Answer.new
-    render json: @answer
+    # render json: @answer
   end
 
   def create
     answer = Answer.create answer_params
-    render json: answer
+    redirect_to answer
+    # render json: answer
   end
 
   def edit
@@ -19,7 +20,13 @@ class AnswersController < ApplicationController
 
   def show
     @answer = Answer.find params[:id]
-    render json: @answers
+    # render json: @answers
+  end
+
+  def destroy
+    answer = Answer.find params[:id]
+    answer.destroy
+    redirect_to question_path
   end
 
   private

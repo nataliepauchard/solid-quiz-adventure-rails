@@ -1,13 +1,23 @@
-<h1><%= @question.content %></h1>
 
+<h1><%= @question.topic.title %></h1>
+
+<h2><%= @question.content %></h2>
+
+<% @question.answers.each do |answer| %>
+  <%= link_to answer.content, answer %>
+<% end %>
+
+<p>Answers coming soon</p>
 <ul>
-  <li><%= @question.content %></li>
+  <li>Choice 1</li>
+  <li>Choice 2</li>
+  <li>Choice 3</li>
+  <li>Choice 4</li>
 </ul>
+
 
 
 <div class="controls">
   <%= link_to 'Edit Question', edit_question_path(@question) %>
   <%= button_to 'Delete Question', @question, :method => 'delete' %>
   <%= link_to 'All Questions', questions_path %>
-
-<p>Answers coming soon</p>
