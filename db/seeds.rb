@@ -9,8 +9,8 @@
 Answer.destroy_all
 a1 = Answer.create :content => 'Yellow', :correct_answer => false
 a2 = Answer.create :content => 'Blue', :correct_answer => true
-a3 = Answer.create :content => 'Indigo', :correct_answer => true
-a4 = Answer.create :content => 'Silver', :correct_answer => true
+a3 = Answer.create :content => 'Indigo', :correct_answer => false
+a4 = Answer.create :content => 'Silver', :correct_answer => false
 
 a5 = Answer.create :content => 'Green', :correct_answer => true
 a6 = Answer.create :content => 'Silver', :correct_answer => false
