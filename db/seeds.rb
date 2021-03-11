@@ -7,51 +7,51 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Answer.destroy_all
-a1 = Answer.create :content => 'Yellow', :correct_answer => false
-a2 = Answer.create :content => 'Blue', :correct_answer => true
-a3 = Answer.create :content => 'Indigo', :correct_answer => false
-a4 = Answer.create :content => 'Silver', :correct_answer => false
+a1 = Answer.create :content => 'A:  Slapped Robin', :correct_answer => false
+a2 = Answer.create :content => 'B:  Robbed a bank', :correct_answer => false
+a3 = Answer.create :content => 'C:  Wrestled an alligator', :correct_answer => false
+a4 = Answer.create :content => 'D:  Tried to drive drunk', :correct_answer => true
 
-a5 = Answer.create :content => 'Gas', :correct_answer => true
-a6 = Answer.create :content => 'Glitter', :correct_answer => false
-a7 = Answer.create :content => 'Gold', :correct_answer => false
-a8 = Answer.create :content => 'Garbage', :correct_answer => false
+a5 = Answer.create :content => 'A:  Stanley Kubrick', :correct_answer => false
+a6 = Answer.create :content => 'B:  Andy Warhol', :correct_answer => true
+a7 = Answer.create :content => 'C:  Roman Polanski', :correct_answer => false
+a8 = Answer.create :content => 'D:  Mel Brooks', :correct_answer => false
 
-a9 = Answer.create :content => 'Grass', :correct_answer => false
-a10 = Answer.create :content => 'Carbon', :correct_answer => false
-a11 = Answer.create :content => 'Basalt and Granite', :correct_answer => true
-a12 = Answer.create :content => 'Water', :correct_answer => false
+a9 = Answer.create :content => 'A:  A mob ', :correct_answer => false
+a10 = Answer.create :content => 'B:  A gang', :correct_answer => false
+a11 = Answer.create :content => 'C:  A mannor', :correct_answer => false
+a12 = Answer.create :content => 'D:  All of the above', :correct_answer => true
 
-a13 = Answer.create :content => '1988', :correct_answer => false
-a14 = Answer.create :content => '2005', :correct_answer => true
-a15 = Answer.create :content => '2020', :correct_answer => false
-a16 = Answer.create :content => '1980', :correct_answer => false
+a13 = Answer.create :content => 'A:  They gang up on it ', :correct_answer => false
+a14 = Answer.create :content => 'B:  They run into their burrows ', :correct_answer => false
+a15 = Answer.create :content => 'C:  They pretend to be dead', :correct_answer => false
+a16 = Answer.create :content => 'D:  All of the above', :correct_answer => true
 
-a17 = Answer.create :content => 'Rocks', :correct_answer => false
-a18 = Answer.create :content => 'Silicon, Oxygen, Iron, and Magnesium', :correct_answer => true
-a19 = Answer.create :content => 'Water', :correct_answer => false
-a20 = Answer.create :content => 'Gas', :correct_answer => false
+a17 = Answer.create :content => 'A:  10 million years', :correct_answer => false
+a18 = Answer.create :content => 'B:  100 million years', :correct_answer => true
+a19 = Answer.create :content => 'C:  300 years', :correct_answer => false
+a20 = Answer.create :content => 'D:  10,000 years', :correct_answer => false
 
-a21 = Answer.create :content => '10 million km', :correct_answer => false
-a22 = Answer.create :content => '200 million km', :correct_answer => false
-a23 = Answer.create :content => '44 thousand km', :correct_answer => false
-a24 = Answer.create :content => '4 billion km', :correct_answer => true
+a21 = Answer.create :content => 'A:  Shelly', :correct_answer => false
+a22 = Answer.create :content => 'B:  Dudey', :correct_answer => false
+a23 = Answer.create :content => 'C:  Crush', :correct_answer => true
+a24 = Answer.create :content => 'D:  Squirm', :correct_answer => false
 
 puts "#{ Answer.count } answers."
 
 Question.destroy_all
-q1 = Question.create :content => 'What colour is the sky?'
-q2 = Question.create :content => 'What are stars made of?'
-q3 = Question.create :content => 'What is the Earth made of?'
-q4 = Question.create :content => 'When was the last Earquake in Japan?'
-q5 = Question.create :content => 'What is Mars made of?'
-q6 = Question.create :content => 'How far is Jupitor from Earth?'
+q1 = Question.create :content => 'Q1: What did Batman do in the very first episode of the 1960s Batman TV show?'
+q2 = Question.create :content => 'Q2: Who produced and directed the 1964 film Batman Dracula?'
+q3 = Question.create :content => 'Q1: What is the correct name for a group of meerkats?'
+q4 = Question.create :content => 'Q2: If a snake threatens a group of meerkats, how do they typically react?'
+q5 = Question.create :content => 'Q1: How long have turtles been on this planet?'
+q6 = Question.create :content => 'Q2: What is the surfer dude turtle called in Finding Nemo?'
 puts "#{ Question.count } questions"
 
 Topic.destroy_all
-t1 = Topic.create :title => 'The Sky', :image => 'https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/cloud/cumulus-cloud.jpg'
-t2 = Topic.create :title => 'The Earth', :image => 'https://www.bulletpoint.com.au/wp-content/uploads/2012/05/Action-on-the-Ground.jpg'
-t3 = Topic.create :title => 'The Planets', :image => 'https://www.bulletpoint.com.au/wp-content/uploads/2012/05/Action-on-the-Ground.jpg'
+t1 = Topic.create :title => 'Batman', :image => 'http://assets1.ignimgs.com/2018/03/24/batmanninja-blogroll-1521931539202.jpg'
+t2 = Topic.create :title => 'Meerkats', :image => 'https://images.macmillan.com/folio-assets/macmillan_us_frontbookcovers_350W/9781250046673.jpg'
+t3 = Topic.create :title => 'Turtles', :image => 'https://www.beano.com/wp-content/uploads/legacy/42864_iStock-834977064.jpg?resize=768%2C512&quality=76&strip=all'
 
 # Associations
 puts "Questions and answers"
